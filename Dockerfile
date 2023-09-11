@@ -1,9 +1,5 @@
-FROM python:3.8-slim
+FROM nginx:latest
 
-WORKDIR /app
-
-COPY aryan.html .
-
-RUN pip install flask
+COPY aryan.html /usr/share/nginx/html/
 
 EXPOSE 8000
